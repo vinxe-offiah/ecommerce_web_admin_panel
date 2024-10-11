@@ -1,16 +1,20 @@
 import 'package:ecommerce_web_admin_panel/common/widgets/layouts/headers/header.dart';
+import 'package:ecommerce_web_admin_panel/common/widgets/layouts/sidebars/sidebar.dart';
 import 'package:flutter/material.dart';
 
 class MobileLayout extends StatelessWidget {
-  const MobileLayout({super.key, this.body});
+  MobileLayout({super.key, this.body});
 
   final Widget? body;
+  // Scaffold key that will be used to modify this scaffold where needed
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const Drawer(),
-      appBar: const VHeader(),
+      key: scaffoldKey,
+      drawer: const VSidebar(),
+      appBar: VHeader(scaffoldKey: scaffoldKey),
       body: body ?? Container(),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:ecommerce_web_admin_panel/common/widgets/layouts/templates/site_layout.dart';
+import 'package:ecommerce_web_admin_panel/routes/app_routes.dart';
 import 'package:ecommerce_web_admin_panel/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,8 +17,13 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: VAppTheme.appTheme,
       darkTheme: VAppTheme.darkTheme,
+      getPages: VAppRoutes.pages,
       initialRoute: VRoutes.home,
       home: const ResponsiveDesignScreen(),
+      unknownRoute: GetPage(
+          name: '/Page-not-found',
+          page: () =>
+              const Scaffold(body: Center(child: Text('Page Not found!')))),
     );
   }
 }

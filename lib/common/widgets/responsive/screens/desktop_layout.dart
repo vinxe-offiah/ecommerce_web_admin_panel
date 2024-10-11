@@ -1,4 +1,5 @@
 import 'package:ecommerce_web_admin_panel/common/widgets/layouts/headers/header.dart';
+import 'package:ecommerce_web_admin_panel/common/widgets/layouts/sidebars/sidebar.dart';
 import 'package:flutter/material.dart';
 
 class DestktopLayout extends StatelessWidget {
@@ -11,7 +12,7 @@ class DestktopLayout extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-          const Expanded(child: Drawer()),
+          const Expanded(child: VSidebar()),
           Expanded(
             flex: 5,
             child: Column(
