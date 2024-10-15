@@ -25,5 +25,7 @@ class VRoutes {
   static const createCustomer = '/createCustomer';
   static const customerDetails = '/customerDetails';
 
-  static const home = '/home';
+  static List<String> sidebarMenuItems = [
+    login,
+  ];
 }

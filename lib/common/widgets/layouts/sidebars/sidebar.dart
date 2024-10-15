@@ -5,6 +5,7 @@ import 'package:ecommerce_web_admin_panel/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../routes/routes.dart';
 import 'menu/menu_item.dart';
 
 class VSidebar extends StatelessWidget {
@@ -42,13 +43,13 @@ class VSidebar extends StatelessWidget {
                             .apply(letterSpacingDelta: 1.2)),
                     // menu Items
                     const VMenuItem(
-                        route: 'you',
+                        route: VRoutes.login,
                         icon: Iconsax.status,
                         itemName: 'Dashboard'),
                     const VMenuItem(
                         route: 'you', icon: Iconsax.image, itemName: 'Media'),
                     const VMenuItem(
-                        route: 'you',
+                        route: 'me',
                         icon: Iconsax.picture_frame,
                         itemName: 'banners'),
                   ],
